@@ -128,7 +128,7 @@ The `SafeLlmAgent` subclass detects missing Vertex AI credentials at runtime and
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/ambient-wildlife-guardian.git
+git clone https://github.com/d3v07/ambient-wildlife-guardian.git
 cd ambient-wildlife-guardian
 
 # 2. Install dependencies
