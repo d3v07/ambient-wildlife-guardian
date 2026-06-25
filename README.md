@@ -43,17 +43,25 @@ It demonstrates every concept from the 5-Day AI Agents Intensive:
 
 ---
 
-## Dashboard
+## Screenshots
 
-### Jungle Reserve — Common Operational Picture
+### Jungle Reserve — Common Operational Picture (Active Alert)
 
-![Ambient Wildlife Guardian Dashboard — Jungle Reserve](dashboard_jungle.png)
+![Ambient Wildlife Guardian Dashboard — Jungle Reserve showing a pending gunshot alert in Sector 9 with Deploy Drone / False Alarm HITL buttons](dashboard_jungle.png)
 
-### Redwood National Park — Live Hydrological Integration
+### Redwood National Park — Live Hydrological Dashboard
 
-![Ambient Wildlife Guardian Dashboard — Redwood NP with USGS live stream data](redwood_dashboard.png)
+![Redwood Guardian Dashboard — full view with Redwood NP topographic radar, USGS NWIS streamflow panels, ADK 2.0 agent trace, mission assets, and trust calibration by sector](screenshot_redwood_idle.png)
 
-> Both dashboards are served from the same FastAPI backend. The Redwood variant pulls **live USGS NWIS streamflow data** and **Open-Meteo weather forecasts** — real APIs, real numbers.
+### Redwood Guardian — Sensor Event Panel (Chainsaw at 95.5dB)
+
+![Redwood Guardian — chainsaw event loaded with 95.5dB, Howland Hill location, ADK workflow trace visible](screenshot_redwood_loaded.png)
+
+### Redwood Guardian — Dual-Panel Dashboard (Map + Hydrological)
+
+![Redwood National Park topographic radar with Patrol and Breeding overlays, USGS live stream data for Redwood Creek and Klamath River](redwood_dashboard.png)
+
+> The Redwood variant pulls **live USGS NWIS streamflow data** and **Open-Meteo weather forecasts** — real APIs, real numbers, in real time.
 
 ---
 
@@ -97,12 +105,12 @@ graph TD
 ## Key Design Decisions
 
 ### 🔀 Context-Aware Triage (not just threshold alarms)
-A chainsaw signature in a sector with an active ranger patrol logs safely. The *same* signal at night in remote Sector 9 with zero patrol coverage triggers immediate dispatch. Context is everything.
+A chainsaw signature in a sector with an active ranger patrol logs safely. The *same* signal at night in remote Tall Trees Grove with zero patrol coverage triggers immediate dispatch. Context is everything.
 
 ### 🛡️ Deterministic Policy Guardrails
 Before any LLM prompt or human confirmation, the Policy node applies strict hard limits:
 - **Wind > 40 km/h** → drone launch blocked, redirects to land ranger teams
-- **Sector 3B Fern Canyon** → altitude cap 120m AGL during breeding season
+- **Fern Canyon** → altitude cap 120m AGL during breeding season
 - **Redwood Creek > 800 cfs** → wading patrol routes to Tall Trees Grove blocked (live USGS data)
 
 ### 📡 Edge Resilience Modes
