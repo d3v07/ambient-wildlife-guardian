@@ -10,6 +10,7 @@
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=flat-square&logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
 [![Gemini](https://img.shields.io/badge/Gemini-2.0%20Flash-8E24AA?style=flat-square&logo=google&logoColor=white)](https://ai.google.dev)
 [![Tests](https://img.shields.io/badge/Tests-11%2F11%20passing-22c55e?style=flat-square&logo=pytest&logoColor=white)]()
+[![Cloud Run](https://img.shields.io/badge/Live%20Demo-Cloud%20Run-4285F4?style=flat-square&logo=googlecloud&logoColor=white)](https://wildlife-guardian-782567466199.us-central1.run.app)
 [![License](https://img.shields.io/badge/License-MIT-f59e0b?style=flat-square)]()
 
 </div>
